@@ -47,8 +47,8 @@ python main.py --topic "Image Fusion"
 The generated content will be saved in the `./output/` directory.
 
 - `--requirement`: Specific requirement for generation.
-- `--saving_path`: Directory to save the output survey.
-- `--model`: Model to use.
+- `--saving_path`: Directory of the generated survey.
+- `--model`: Model to use. (recommend: o3-mini)
 - `--topic`: Topic to generate content for.
 - `--section_num`: Number of sections in the outline.
 - `--subsection_len`: Length of each subsection.
@@ -65,7 +65,6 @@ Here is an example command to evaluate the generated survey on the topic "LLMs f
 
 ```sh
 python evaluation.py --topic "LLMs for education" 
-               --gpu 0
                --saving_path ./output/
                --model o3-mini
                --db_path ./database
@@ -79,8 +78,8 @@ Make sure the generated survey is in the `./output/` directory
 The evaluation result will be saved in the `./output/` directory.
 
 - `--saving_path`: Directory to save the evaluation results (default: './output/').
-- `--model`: Model for evaluation.
-- `--topic`: Topic of generated survey.
+- `--model`: Model for evaluation. (recommend use different models for evaluation)
+- `--topic`: Topic of generated survey. (use the same topic as generation)
 - `--db_path`: Directory of the database.
 - `--embedding_model`: Embedding model for retrieval.
 - `--api_key`: API key for the model.
